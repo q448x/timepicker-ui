@@ -18,7 +18,7 @@ declare module 'timepicker-ui' {
     switchToMinutesAfterSelectHour?: boolean;
     iconTemplate?: string;
     iconTemplateMobile?: string;
-    theme?: 'basic' | 'crane-straight' | 'crane-radius';
+    theme?: 'basic' | 'crane-straight' | 'crane-radius' | string;
     enableSwitchIcon?: boolean;
     focusInputAfterCloseModal?: boolean;
   };

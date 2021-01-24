@@ -21,7 +21,7 @@ declare type optionTypes = {
   preventDefault?: boolean;
   selectTimeLabel?: string;
   switchToMinutesAfterSelectHour?: boolean;
-  theme?: 'basic' | 'crane-straight' | 'crane-radius';
+  theme?: 'basic' | 'crane-straight' | 'crane-radius' | string;
 };
 
 export { optionTypes };

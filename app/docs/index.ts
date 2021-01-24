@@ -82,6 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
       preventDefault: false,
       enableScrollbar: true,
       editable: true,
+      theme: 'crane-radius',
     };
 
     objs = { ...obj };
