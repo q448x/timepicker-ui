@@ -468,11 +468,13 @@
     box-sizing: content-box;
     border-radius: 100%;
     transition: all 0.2s ease;
+    background: #6200ee;
 
     &.small-circle {
       top: -0.8125rem;
       left: -0.8125rem;
       border-width: 0.75rem;
+      background: #fff;
     }
   }
 
