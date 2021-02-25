@@ -28,11 +28,63 @@
   <body>
     <div class="container-fluid">
       <div class="row">
+        <div class="col-md-12 generator">
+          <div class="card cards">
+            <div class="row h-100">
+              <div class="col-md-12 h-100">
+                <div class="test"></div>
+              </div>
+              <button
+                id="btn-toggle-open"
+                class="btn btn-primary btn-sm mt-2 position-absolute btn-toggle"
+                style="right: 20px; z-index: 10000"
+              >
+                Open options
+              </button>
+
+              <button
+                class="btn btn-primary d-none btn-sm mt-2 position-absolute toggle-sidenav btn-inside"
+                style="left: 20px; z-index: 10000"
+              >
+                Open sidenav
+              </button>
+              <div
+                class="second-column col-md-4 position-fixed"
+                style="
+                  right: 0;
+                  z-index: 9999;
+                  background-color: #fff;
+                  box-shadow: -10px 0px 10px 1px rgba(0, 0, 0, 0.2);
+                  padding: 0;
+                "
+              >
+                <div class="p-3">
+                  <div class="options-wrapper">
+                    <div class="d-flex justify-content-center">
+                      <button
+                        class="btn btn-primary btn-sm btn-toggle float-right"
+                        id="btn-toggle-close"
+                      >
+                        Close options
+                      </button>
+                    </div>
+                    <hr />
+                    <h4 class="text-center p-3">Options</h4>
+                    <div class="radio"></div>
+                    <div class="inputs mt-4"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div
-          class="col-md-12 col-lg-4"
+          class="p-3 sidenav show col-sm-1"
           style="overflow-y: scroll; overflow-x: hidden; max-height: 100vh"
         >
-          <h1 class="h1 mt-3">timepicker-ui</h1>
+          <h1 class="h1 mt-3">
+            timepicker-ui <button class="btn btn-primary toggle-sidenav">Close sidenav</button>
+          </h1>
 
           <hr class="my-3" />
 
@@ -105,43 +157,6 @@
                 </code>
               </pre>
           </section>
-        </div>
-        <div class="col-md-12 col-lg-8" style="position: fixed; right: 0">
-          <div class="card cards">
-            <div class="row h-100">
-              <div class="col-md-12 h-100">
-                <div class="test"></div>
-              </div>
-              <button
-                id="btn-toggle"
-                class="btn btn-danger btn-sm mt-2 position-absolute"
-                style="left: 20px; z-index: 10000"
-              >
-                Toggle options
-              </button>
-              <div
-                class="second-column col-md-4 position-absolute"
-                style="
-                  right: 0;
-                  z-index: 9999;
-                  background-color: #fff;
-                  box-shadow: -10px 0px 10px 1px rgba(0, 0, 0, 0.2);
-                  padding: 0;
-                "
-              >
-                <div class="p-3">
-                  <div class="options-wrapper invisible">
-                    <!-- <h4 class="text-center p-3">Events</h4>
-                    <div class="events"></div> -->
-                    <hr />
-                    <h4 class="text-center p-3">Options</h4>
-                    <div class="radio"></div>
-                    <div class="inputs mt-4"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>

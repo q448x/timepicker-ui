@@ -256,20 +256,46 @@ document.addEventListener('DOMContentLoaded', () => {
   inputs.forEach((el) => {
     return el.addEventListener('change', handleInputsChange);
   });
+  const btnsToggle = document.querySelectorAll('.btn-toggle');
 
-  const btnToggle = document.querySelector('#btn-toggle') as HTMLButtonElement;
+  const btnToggleOpen = document.querySelector('#btn-toggle-open') as HTMLButtonElement;
+  const btnToggleClose = document.querySelector('#btn-toggle-close') as HTMLButtonElement;
 
-  btnToggle.addEventListener('click', () => {
-    secondColumn.classList.toggle('show');
-    const inv = secondColumn.querySelector('.options-wrapper');
+  btnsToggle.forEach((e) => {
+    e.addEventListener('click', () => {
+      secondColumn.classList.toggle('show');
 
-    if (secondColumn.classList.contains('show')) {
-      inv?.classList.remove('invisible');
-    } else {
-      setTimeout(() => {
-        inv?.classList.add('invisible');
-      }, 300);
-    }
+      if (secondColumn.classList.contains('show')) {
+        secondColumn.style.transform = 'translateX(0)';
+        btnToggleOpen.classList.add('d-none');
+      } else {
+        secondColumn.style.transform = 'translateX(100%)';
+        setTimeout(() => {
+          btnToggleOpen.classList.remove('d-none');
+        }, 300);
+      }
+    });
+  });
+
+  const sidenav = document.querySelector('.sidenav') as HTMLDivElement;
+  const btnInside = document.querySelector('.btn-inside') as HTMLButtonElement;
+
+  const allBtns = document.querySelectorAll('.toggle-sidenav');
+
+  allBtns.forEach((e) => {
+    return e.addEventListener('click', () => {
+      sidenav.classList.toggle('show');
+
+      if (!sidenav.classList.contains('show')) {
+        sidenav.style.transform = 'translateX(-100%)';
+        setTimeout(() => {
+          btnInside.classList.remove('d-none');
+        }, 300);
+      } else {
+        sidenav.style.transform = 'translateX(0)';
+        btnInside.classList.add('d-none');
+      }
+    });
   });
 
   // events.forEach((el) => {

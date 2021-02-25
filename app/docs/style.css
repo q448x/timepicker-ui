@@ -2,13 +2,17 @@
 
 body {
   line-height: 1.15;
-  overflow: hidden;
   height: 0px;
 }
 
 h1 {
   font-size: 3.75rem !important;
   font-weight: 400 !important;
+}
+@media (max-width: 575px) {
+  h1 {
+    font-size: 2.75rem !important;
+  }
 }
 
 section.docs {
@@ -166,6 +170,12 @@ pre {
   height: 800px;
 }
 
+.sidenav {
+  position: fixed;
+  z-index: 10001;
+  background-color: #fff;
+}
+
 .test {
   position: relative;
   width: 100%;
@@ -188,16 +198,17 @@ pre {
 .second-column {
   overflow: hidden;
   overflow-y: scroll;
+  width: 300px;
+  max-width: 300px;
   max-height: 800px;
-  width: 0px;
-  transition: 0.4s ease-out;
+  transition: all 0.4s ease;
+  transform: translate(100%);
 }
 .second-column::-webkit-scrollbar {
   display: none;
 }
 .second-column.show {
-  width: 400px;
-  transition: 0.4s ease-in;
+  transition: all 0.4s ease;
 }
 
 .timepicker-ui-modal.removed {
@@ -206,3 +217,17 @@ pre {
   right: 0 !important;
   left: 0 !important;
 }
+.sidenav,
+.generator {
+  transition: all 0.4s ease;
+}
+.sidenav {
+  min-width: 300px;
+  max-width: 600px;
+}
+
+/* @media (max-width: 575px) {
+  .sidenav {
+    max-width: 300px;
+  }
+} */

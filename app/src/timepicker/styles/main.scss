@@ -514,12 +514,14 @@
 .invalid-value {
   border-color: $redtovalid !important;
   color: $redtovalid !important;
+  background-color: #fff;
 
   &:hover,
   &:focus,
   &:active {
     border-color: $redtovalid !important;
     color: $redtovalid !important;
+    background-color: #fff;
   }
 }
 
